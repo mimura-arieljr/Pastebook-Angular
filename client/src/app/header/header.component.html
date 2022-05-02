@@ -1,0 +1,18 @@
+<div id="header-container">
+    <div id="logo-container">
+        <a routerLink=""><p>pastebook<p></a>
+    </div>
+    <div id="navigation-container">
+        <a routerLink="/{{user.Username}}">
+            <div class="header-profile-pic">
+                <img class="icon header-profile-pic" [src]="user.ImageSrc"/>
+                <p>{{user.FirstName}}</p>
+            </div>
+        </a>
+        <a (click)="onLogout()">
+            <div class="logout">
+                <mat-icon>logout</mat-icon>
+            </div>
+        </a>
+    </div>
+</div>

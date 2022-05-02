@@ -1,0 +1,265 @@
+.profile-top {
+    padding-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 1rem;
+}
+.profile-cover {
+    margin-bottom: .75rem;
+    display: flex;
+    justify-content: center;
+}
+.profile-picture {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    object-fit: cover;
+}
+#uploaded-profile-pic {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    size:inherit;
+    object-fit: cover;
+}
+.profile-name{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.profile-picture-with-name {
+    text-align: center;
+}
+.page {
+    background-color: rgb(245,245,245);
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profile-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        position: relative;
+        margin-top: 1.5rem;
+    }
+    .sticky {
+        position: sticky;
+        top: 1rem; 
+    }
+        .profile-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            margin-bottom: 0.5rem;
+            padding: 1rem 1rem 0.5rem 1rem;
+            background-color: rgb(255, 255, 255);
+        }
+        .profile-intro-text {
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+        }
+        .user-info {
+            padding: 0.5rem 0 0.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            margin-left: 0.75rem;
+        }
+.user-info-details
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+.user-info-details mat-icon {
+    color: rgb(177, 177, 177);
+    font-size: 1.25rem;
+    text-align: center;
+    padding-top: 0.1rem;
+}
+    .terms {
+        padding: 0 0.5rem;
+        font-size: 0.85vw;
+        margin-bottom: 1rem;
+    }
+    .terms p {
+        margin: 0;
+        padding-top: 0.5rem;
+    }
+.right-side {
+    width: 35%;
+    margin-top: 1.5rem;
+}
+    .posts-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-radius: 0.5rem;
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            padding: 1rem 1rem 1rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .post-icon {
+            height: 2.3rem;
+            width: 2.3rem;
+            border-radius: 50%;
+            background-color: rgb(245,245,245);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        }
+        .post-profile-pic {
+            height: 2.3rem;
+            width: 2.3rem;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .post-space {
+            padding-left: 1rem;
+            width: 95%;
+        }
+        .post-button {
+            font-size: 1.2rem;
+            padding: 0.55rem 0 0.55rem 1rem;
+            border-radius: 2rem;
+            width: 99%;
+            background-color: #eff2f4;
+            border-color: none;
+            border-style: none;
+            text-align: left;
+            color: #9c9c9c;
+            cursor: text;
+        }
+    .main-posts {
+        border-radius: 0.5rem;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        padding: 1rem 1rem 1rem 1.25rem;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+        .main-post-title {
+            font-weight: bold;
+        }
+.link-to {
+    margin: 0;
+    text-align: right;
+    color: #4267B2;
+}
+.user-bio {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: justify;
+    margin: 0 0.5rem 0.75rem 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.user-bio p {
+    margin: 0;
+    display:block;
+}
+.caught-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-card
+{
+    border-radius: 0.5rem;
+    width:100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.post-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    gap: 1rem;
+    padding: 0.75rem 1rem 0 1rem;
+    margin: 0;
+}
+.post-header-image
+{
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.post-body
+{
+    margin: 0;
+}
+.post-content
+{
+    margin: 0;
+    padding: 0 1rem;
+}
+.post-content > p
+{
+    margin: 0.25rem 0 1rem 0;
+}
+.post-image
+{
+    max-height: 900px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+a
+{
+    text-decoration: none;
+    color: black
+}
+a:hover
+{
+    text-decoration: underline;
+}
+.add-friend {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+#add-friend-button, #friends-profile-header, #pending-friend-request, #accept {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #4267B2;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 750;
+    border: none;
+}
+#friends-profile-header, #pending-friend-request {
+    background-color: rgb(230,230,230);
+    color: black;
+}
+#add-friend-button:hover, #accept:hover {
+    cursor: pointer;
+    background-color: #6082c5;
+}

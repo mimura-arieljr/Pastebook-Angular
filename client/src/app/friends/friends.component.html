@@ -1,0 +1,33 @@
+<div [ngStyle]="{height: '8vh'}">
+    <app-header></app-header>
+</div>
+<div class="holder-two">
+    <div class="sidebar-left">
+        <app-left-sidebar></app-left-sidebar>
+    </div>
+    <div class="body-right">
+        <div class='global-holder'>
+            <div class='friends-holder'>
+                <div class='friendlist-text'>
+                    <span class='text-friend'>Friends</span>
+                </div>
+                <div class='search-friend'>
+                    <input type="text" placeholder='Search' class='search-field' [(ngModel)]="firstName" (input)="search()" />
+                </div>
+            </div>
+
+            <div class='box-wrapper'>
+                <div *ngFor="let friend of friends, let i = index" class='friend-profile-box'>
+                    <div class='friend-profile-pic'>
+                        <a routerLink="/{{friend.Username}}"><img class='image-sample-friend' [src]="friend.ImageSrc" />
+                        </a>
+                    </div>
+                    <div class='friend-name'>
+                        <a routerLink="/{{friend.Username}}" class='flname-link'><span class='flname'>{{friend.FirstName}}
+                                {{friend.LastName}}</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

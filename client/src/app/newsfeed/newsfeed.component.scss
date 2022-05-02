@@ -1,0 +1,152 @@
+:host
+{
+    width: 35%;
+
+}
+.create-post-container
+{
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.create-post
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    box-sizing: border-box;
+}
+
+.create-post-btn, label
+{
+    font-size: 1rem !important;
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+    border:none;
+    background-color: white;
+}
+
+.create-post-btn:hover, label:hover
+{
+    cursor: pointer;
+    background:rgba(0, 0, 0, 0.2)
+}
+
+.create-post-image
+{
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+input[type="text"]
+{
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+input[type="text"]:focus
+{
+    outline:none;
+}
+
+.hidden
+{
+    display: none;
+}
+.create-post button
+{
+    font-size: 1.25rem;
+}
+
+.post-card
+{
+    border-radius: 0.5rem;
+    width:100%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.post-header
+{
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+    gap: 1rem;
+    padding: 0.75rem 1rem 0 1rem;
+    margin: 0;
+}
+
+.post-header-image
+{
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post-header-image-link
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.post-body
+{
+    margin: 0;
+}
+.post-content
+{
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.post-content > p
+{
+    margin: 1rem 0 0.5rem 0;
+}
+
+.post-image
+{
+    max-height: 900px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+a
+{
+    text-decoration: none;
+    color: black
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+.profile-name
+{
+    padding-top: 2px;
+}
+
+.profile-name p{
+    margin: 0;
+    padding: 0;
+}
+
+.timestamp-text{
+   font-size: 0.8rem;
+}

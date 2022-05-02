@@ -1,0 +1,65 @@
+#header-container {
+    background: #4267B2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+}
+#logo-container {
+    color: white;
+    cursor: pointer;
+}
+#logo-container p {
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: 0.10rem;
+}
+#navigation-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+.icon {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius:50%;
+    object-fit: cover;
+}
+.icon:hover {
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+}
+.icon:active {
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+}
+.header-profile-pic {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 0.5rem;
+}
+.header-profile-pic:hover {
+    opacity: 80%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.logout mat-icon {
+    font-size: 2rem;
+}
+
+.logout mat-icon:hover
+{
+    cursor: pointer;
+    filter: brightness(0.85)
+}

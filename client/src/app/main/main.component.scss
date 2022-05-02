@@ -1,0 +1,17 @@
+.header
+{
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+}
+.body
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15rem;
+    padding-top: 8vh;
+}

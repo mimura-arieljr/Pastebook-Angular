@@ -1,0 +1,95 @@
+<div class="create-post-container">
+    <div class="create-post">
+        <img class="create-post-image" [src]="currentUser.ImageSrc" />
+        <input type="text" placeholder="What's on your mind?" maxlength="1000" [(ngModel)]="newPostContent" />
+        <input type="file" value="Upload" class="hidden" id="file" accept=".png, .jpg, .jpeg .gif"
+            (change)="handleFileSelect($event)" />
+        <label for="file">Upload</label>
+        <button class="create-post-btn" (click)="onSubmitPost()">Post</button>
+        <button class="create-post-btn" (click)="resetCreatePost()" *ngIf="newPostContent || base64Image">Reset</button>
+    </div>
+    <div class="post-content">
+        <p [ngClass]="{'hidden':!newPostContent}" [ngStyle]="{paddingBottom: '0.5rem'}">{{newPostContent}}</p>
+    </div>
+    <div>
+        <img class="post-image" [src]="base64Image" [ngClass]="{'hidden':!base64Image}" />
+    </div>
+</div>
+
+<div *ngFor="let post of newsfeedPosts, let i = index">
+
+    <div class="post-card" *ngIf="i+1 === newsfeedPosts.length" #lastPost>
+        <div class="post-header">
+            <div [ngStyle]="{display: 'flex', flexDirection: 'row', gap: '1rem'}">
+                <a [routerLink]="post.Username"><img class="post-header-image" [src]="post.OwnerImage" /></a>
+                <div>
+                    <div class="profile-name">
+                        <div [ngStyle]="{display: 'flex', flexDirection: 'row', gap: '0.25rem'}">
+                            <a [routerLink]="post.Username">
+                                <p>{{post.FirstName}} {{post.LastName}}</p>
+                            </a>
+                            <p *ngIf="post.TargetUsername">&#9656;</p>
+                            <a *ngIf="post.TargetUsername" [routerLink]="post.TargetUsername">
+                                <p>{{post.TargetFirstName}} {{post.TargetLastName}}</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="timestamp-text">{{convertTimestampToRelative(post.Timestamp)}}</div>
+                </div>
+            </div>
+           
+            <div>
+                <button class="delete-btn" [ngClass]="{'hidden': currentUser.Username != post.Username}" (click)="onDeletePost(post.Id, i)">Delete</button>
+            </div>
+        </div>
+
+        <div class="post-body">
+            <div class="post-content">
+                <p>{{post.Content}}</p>
+            </div>
+            <div>
+                <img class="post-image" [src]="post.ImageSrc" *ngIf="post.ImageSrc" />
+            </div>
+        </div>
+    </div>
+
+    <div class="post-card" *ngIf="i+1 !== newsfeedPosts.length">
+        <div class="post-header">
+            <div [ngStyle]="{display: 'flex', flexDirection: 'row', gap: '1rem'}">
+                <a [routerLink]="post.Username"><img class="post-header-image" [src]="post.OwnerImage" /></a>
+                <div>
+                    <div class="profile-name">
+                        <div [ngStyle]="{display: 'flex', flexDirection: 'row', gap: '0.25rem'}">
+                            <a [routerLink]="post.Username">
+                                <p>{{post.FirstName}} {{post.LastName}}</p>
+                            </a>
+                            <p *ngIf="post.TargetUsername">&#9656;</p>
+                            <a *ngIf="post.TargetUsername" [routerLink]="post.TargetUsername">
+                                <p>{{post.TargetFirstName}} {{post.TargetLastName}}</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="timestamp-text">{{convertTimestampToRelative(post.Timestamp)}}</div>
+                </div>
+            </div>
+           
+            <div>
+                <button class="delete-btn" [ngClass]="{'hidden': currentUser.Username != post.Username}" (click)="onDeletePost(post.Id, i)">Delete</button>
+            </div>
+
+        </div>
+        <div class="post-body">
+            <div class="post-content">
+                <p>{{post.Content}}</p>
+            </div>
+            <div>
+                <img class="post-image" [src]="post.ImageSrc" *ngIf="post.ImageSrc" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div [ngStyle]="{position: 'relative', transform: 'translateY(100px)'}">
+    <ngx-spinner template="<img src='../../assets/loading-spinner.gif'>" [fullScreen]="false"></ngx-spinner>
+</div>
+<hr>

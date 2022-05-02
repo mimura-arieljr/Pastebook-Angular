@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="left">
+        <h1>pastebook</h1>
+        <p>Pastebook helps you connect and share with the people in your life.</p>
+    </div>
+    <div class="right">
+        <div class="box">
+            <div class="login-header">
+                <div class="log-in">
+                    Log In to Pastebook
+                </div>
+            </div>
+            <div class="user-form">
+                <div class="input-fields">
+                    <form class="login-form" [formGroup]="userForm" (ngSubmit)="submitForm()" >
+                        <div class="input-email">
+                            <input type="text" placeholder="Email" name="Email" formControlName="Email" />
+                            <p *ngIf="Email?.touched && Email?.invalid">
+                                <span *ngIf="Email?.errors?.['required']">Email address is required.</span>
+                                <span *ngIf="Email?.errors?.['pattern']">Invalid email address. Format: sample@sample.com</span>
+                            </p>
+                        </div>
+                        <div class="input-password">
+                            <input type="password" placeholder="Password" name="Password" formControlName="Password" />
+                            <p *ngIf="Password?.touched && Password?.invalid">
+                                <span *ngIf="Password?.errors?.['required'] || Password?.errors?.['minLength']">Password is required; must be at least 8 characters.</span>
+                            </p>
+                        </div>
+                        <p *ngIf="!validCredentials" [ngStyle]="{padding: '0 0 1rem 0', margin: '0', color: 'red', fontSize: '0.75rem'}">Invalid Credentials</p>
+                        <div class="login-button">
+                            <input type="submit" class="btn" value="Log In" [disabled]="userForm.invalid"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

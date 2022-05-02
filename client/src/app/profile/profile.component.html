@@ -1,0 +1,64 @@
+<div [ngStyle]="{height: '8vh'}">
+    <app-header></app-header>
+</div>
+<div class="profile-top">
+    <div class="profile-cover">
+        <div class="profile-picture">
+            <img [src]="profPic" id="uploaded-profile-pic">
+        </div>
+    </div>
+    <div class="profile-picture-with-name">
+        <div class="profile-name">{{userInfo.FirstName}} {{userInfo.LastName}}</div>
+    </div>
+    <div class="add-friend">
+        <button id="friends-profile-header" *ngIf="status == 'Friends'">Friends</button>
+        <button id="add-friend-button" *ngIf="status == 'NotFriends'" (click)="addFriend()">Add Friend</button>
+        <button id="accept" *ngIf="status == 'PendingAccept'" (click)="acceptRequest()">Accept</button>
+        <button id="pending-friend-request" *ngIf="status=='PendingRequest'">Pending</button>
+    </div>
+</div>
+<div class="page">
+    <div class="profile-body">
+        <div class="left-side">
+            <div class="sticky">
+            <div class="profile-intro">
+                <div class="profile-intro-text">
+                    Intro
+                </div>
+                <div class="user-bio">
+                    {{bio}}
+                </div>
+                <div *ngIf="status === 'Owner' || status === 'Friends'">
+                    <div class="user-info">
+                        <div class="user-info-details">
+                            <mat-icon>email</mat-icon>
+                            {{userInfo.EmailAddress}}
+                        </div>
+                        <div class="user-info-details" *ngIf="userInfo.MobileNumber !== ''">
+                            <mat-icon>contacts</mat-icon>
+                            {{userInfo.MobileNumber}}
+                        </div>
+                        <div class="user-info-details">
+                            <mat-icon>cake</mat-icon>
+                            {{birthday}}
+                        </div>
+                        <div class="user-info-details">
+                            <mat-icon>wc</mat-icon>
+                            {{userInfo.Gender}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="for-sticky">
+                <div class="terms">
+                    <p>Privacy • Terms • Advertising • Ad Choices • Cookies • More </p>
+                    <p>© 2022</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="right-side">
+            <app-timeline></app-timeline>
+        </div>
+    </div>
+</div> 

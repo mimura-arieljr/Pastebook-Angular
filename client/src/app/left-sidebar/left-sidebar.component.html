@@ -1,0 +1,18 @@
+<div id="sidebar-container">
+    <a routerLink="/{{user.Username}}">
+        <div class='sidebar-row'>
+            <div class='sidebar-images'>
+                <img class='sidebar-icon' alt='' [src]="user.ImageSrc"/>
+            </div>
+            <p class='sidebar-text'>{{user.FirstName}} {{user.LastName}}</p>
+        </div>
+    </a>
+    <a routerLink="/friends">
+        <div class='sidebar-row'>
+            <div class='sidebar-images'>
+                <mat-icon>people</mat-icon>
+            </div>
+            <p class='sidebar-text'>Friends</p>
+        </div>
+    </a>
+</div>

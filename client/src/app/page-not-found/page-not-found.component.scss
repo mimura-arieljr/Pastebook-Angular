@@ -1,0 +1,81 @@
+.global-container-nonexistentpage{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-nonexistentpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 12rem 0;
+    height: 100%;
+    width: 40%;
+    flex:2;
+}
+
+.spacer-div-1, .spacer-div-2{
+    flex: 1;
+}
+
+.nep-icon{
+    display: flex;
+    justify-content: center;
+}
+.nep-icon img {
+    max-width: 6rem;
+}
+
+.this-page-text-box{
+    margin-top: 2rem;
+}
+
+    .this-page-text{
+        font-size: 1.25rem;
+        font-family: 'Open Sans', sans-serif;
+        color: #65676b;
+        font-weight: 700;
+        line-height: 1.2;
+        display: block;
+        text-align: center;
+        display: block;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    .link-broken-text{
+        word-wrap: break-word;
+        max-width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.03rem;
+        color: #66576b;
+        display: block;
+        text-align: center;
+    }
+
+.news-feed-buttonbox{
+    background-color: #1b74e4;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.news-feed-buttonbox:hover{
+    opacity: 75%;
+}
+
+    .news-feed-button{
+        background-color: #1b74e4;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        line-height: 1.1765;
+        margin-top: 0.5rem;
+        border-style: hidden;
+    }
